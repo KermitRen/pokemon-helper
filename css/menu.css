@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    background-color: rgb(49, 51, 54);
+    padding-top: 80px;
+}
+
+#leftMenu {
+    width: 300px;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 6px 6px 10px #121212, -6px 6px 10px #121212;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin-right: 2.5%;
+    float: left;
+}
+
+#leftMenu a, #leftMenu a:visited {
+    position: relative;
+    display: block;
+    color: white;
+    height: 80px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: 0.3s;
+    padding-left: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+#leftMenu i {
+    position: absolute;
+    font-size: 44px;
+    right: 0px;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#leftMenu a:nth-child(odd) {
+    background-color: #242424;
+}
+
+#leftMenu a:nth-child(even) {
+    background-color: #282828;
+}
+
+#leftMenu a:hover {
+    filter:brightness(80%);
+}
+
+#leftMenu a:hover > i {
+    color: #ed2626;
+}
+
+#leftMenu #selectedItem {
+    filter: brightness(80%);
+}
+
+#leftMenu #selectedItem i {
+    color: #ed2626;
+}

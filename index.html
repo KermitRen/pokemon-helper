@@ -1,12 +1,112 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
   
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Helper</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/typeCheck.css">
+    <script src="/js/typeCheck.js"></script>
   </head>
 
   <body>
-    <p> hello </p>
-    <p> Testing if git works!</p>
+      <!-- Left Menu -->
+      <div id="leftMenu">
+        <a href="index.html" id="selectedItem"> Type Checker
+          <i class="material-icons">auto_awesome</i>
+        </a>
+        <a href="index.html"> Stat List
+          <i class="material-icons">equalizer</i>
+        </a>
+        <a href="index.html"> Natures
+          <i class="material-icons">park</i>
+        </a>
+
+      </div>
+
+      <!-- Type-selection Menu -->
+    <div id="selectionMenu">
+      <p id="selectionText">Select the pokemons <br> type combination</p>
+      <div class=selectionGridContainer>
+          <button type="button" onClick="clickType('normal')">  <img id="select_normal" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </button>
+          <button type="button" onClick="clickType('fighting')">  <img id="select_fighting" src="/images/Pokemon_Type_Icon_Fighting.svg"> </img> </button>
+          <button type="button" onClick="clickType('flying')">  <img id="select_flying" src="/images/Pokemon_Type_Icon_Flying.svg"> </img> </button>
+          <button type="button" onClick="clickType('poison')">  <img id="select_poison" src="/images/Pokemon_Type_Icon_Poison.svg"> </img> </button>
+          <button type="button" onClick="clickType('ground')">  <img id="select_ground" src="/images/Pokemon_Type_Icon_Ground.svg"> </img> </button>
+          <button type="button" onClick="clickType('rock')">  <img id="select_rock" src="/images/Pokemon_Type_Icon_Rock.svg"> </img> </button>
+          <button type="button" onClick="clickType('bug')">  <img id="select_bug" src="/images/Pokemon_Type_Icon_Bug.svg"> </img> </button>
+          <button type="button" onClick="clickType('ghost')">  <img id="select_ghost" src="/images/Pokemon_Type_Icon_Ghost.svg"> </img> </button>
+          <button type="button" onClick="clickType('steel')">  <img id="select_steel" src="/images/Pokemon_Type_Icon_Steel.svg"> </img> </button>
+          <button type="button" onClick="clickType('fire')">  <img id="select_fire" src="/images/Pokemon_Type_Icon_Fire.svg"> </img> </button>
+          <button type="button" onClick="clickType('water')">  <img id="select_water" src="/images/Pokemon_Type_Icon_Water.svg"> </img> </button>
+          <button type="button" onClick="clickType('grass')">  <img id="select_grass" src="/images/Pokemon_Type_Icon_Grass.svg"> </img> </button>
+          <button type="button" onClick="clickType('electric')">  <img id="select_electric" src="/images/Pokemon_Type_Icon_Electric.svg"> </img> </button>
+          <button type="button" onClick="clickType('psychic')">  <img id="select_psychic" src="/images/Pokemon_Type_Icon_Psychic.svg"> </img> </button>
+          <button type="button" onClick="clickType('ice')">  <img id="select_ice" src="/images/Pokemon_Type_Icon_Ice.svg"> </img> </button>
+          <button type="button" onClick="clickType('dragon')">  <img id="select_dragon" src="/images/Pokemon_Type_Icon_Dragon.svg"> </img> </button>
+          <button type="button" onClick="clickType('dark')">  <img id="select_dark" src="/images/Pokemon_Type_Icon_Dark.svg"> </img> </button>
+          <button type="button" onClick="clickType('fairy')">  <img id="select_fairy" src="/images/Pokemon_Type_Icon_Fairy.svg"> </img> </button>
+      </div>
+      <div id="selectedTypes">
+          <img id="pokeballIcon" src="images/pokeballIcon.svg"></img>
+          <p>:</p>
+          <button type="button" onClick="clickSelectedType(0)">  <img id="selectedType1" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </button>
+          <button type="button" onClick="clickSelectedType(1)">  <img id="selectedType2" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </button>
+      </div>
+  </div>
+
+  <!-- Results -->
+  <div id="results">
+      <div class="resultContainer" id="weaknessesContainer">
+          <h2 class="resultHeader"> Weaknesses</h2>
+          <div id="weaknessesGrid" class=resultGridContainer> 
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+          </div>
+      </div>
+      <div class="resultContainer" id="resistancesContainer">
+          <h2 class="resultHeader"> Resistances</h2>
+          <div id="resistancesGrid"  class=resultGridContainer> 
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+          </div>
+      </div>
+      <div class="resultContainer" id="immunitiesContainer">
+          <h2 class="resultHeader"> Immunities</h2>
+          <div id="immunitiesGrid"  class=resultGridContainer> 
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+              <div class="typeContainer"> <img class="typeImg" src="/images/Pokemon_Type_Icon_Normal.svg"> </img> </div>
+          </div>
+      </div>
+  </div>
   </body>
   
 </html>

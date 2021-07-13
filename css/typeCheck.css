@@ -1,0 +1,146 @@
+/*Selection Menu*/
+#selectionMenu {
+    background-color: rgb(75, 81, 90);
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px #262626ff, -2px -2px 15px #262626ff;
+    float: left;
+    width: 50%;
+    min-width: 600px;
+    height: 775px;
+}
+
+#selectionText {
+    margin: 50px 0px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.selectionGridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: center;
+    gap: 20px 40px;
+}
+
+.selectionGridContainer button {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.selectionGridContainer button:hover {
+    filter: brightness(80%);
+}
+
+#selectedTypes {
+    display: flex;
+    height: 85px;
+    justify-content: left;
+    align-items: center;
+    background-color: #363636ff;
+    border-radius: 50px;
+    margin: 75px 310px 0px 310px;
+    padding-left: 5px;
+
+}
+
+#pokeballIcon {
+    width: 75px;
+    height: 75px;
+    margin-right: 30px;
+}
+
+#selectedTypes p {
+    color: white;
+    font-size: 56px;
+    margin: 0px;
+    margin-right: 30px;
+}
+
+#selectedTypes button {
+    width: 65px;
+    height: 65px;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    visibility: hidden;
+}
+
+#selectedTypes button:hover {
+    filter: brightness(80%);
+}
+
+/*Results*/
+#results {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 0px 5%;
+    float: left;
+    width: 21%;
+    padding-top: 0px;
+}
+
+.resultContainer {
+    border-radius: 10px;
+    height: 215px;
+    padding-top: 15px;
+}
+
+#weaknessesContainer {
+    background-color: #42ea8517;
+    color: #42ea86ff;
+    margin-bottom: 65px;
+}
+
+#resistancesContainer {
+    background-color: #db424217;
+    color: #db4242ff;
+    margin-bottom: 65px;
+}
+
+#immunitiesContainer {
+    background-color: #00000017;
+    color: #000000ff;
+}
+
+.resultHeader {
+    margin: 0px;
+    text-align: center;
+}
+
+.resultGridContainer {
+    margin: 5px 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    gap: 20px 20px;
+
+}
+
+.typeContainer {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+}
+
+.typeImg {
+    width: 50px;
+    height: 50px;
+}
+
+.modifierImg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    background-color: transparent;
+}
