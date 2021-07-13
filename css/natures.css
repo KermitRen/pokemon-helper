@@ -1,0 +1,110 @@
+/* Nature info */
+
+#middleSection {
+    float: left;
+    width: 35%;
+}
+
+#middleSection h1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+#middleSection hr {
+    margin-bottom: 15px;
+}
+
+#natureText {
+    font-size: 18px;
+    margin-bottom: 150px;
+}
+
+#natureFocus {
+    width: 150px;
+    display: none;
+}
+
+#natureFocus h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#natureFocus #posStat {
+    font-size: 26px;
+    font-weight: 500;
+    color: #51f582;
+}
+
+#natureFocus #negStat {
+    font-size: 26px;
+    font-weight: 500;
+    color: #ff3d3d;
+}
+
+/* Nature table */
+
+#natureTableContainer {
+    width:100%;
+}
+
+#natureTable {
+    width: 35%;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgb(49, 51, 54);
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #262626ff;
+}
+
+#natureTable tr th:nth-child(n+2) {
+    background-color: #3a3f47;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ff3d3d;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#natureTable tr td:nth-child(n+1) {
+    background-color: rgb(75, 81, 90);
+    height: 60px;
+    font-size: 18px;
+}
+
+#natureTable tbody tr td:nth-child(n+2):hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+#natureTable tr:nth-child(n+2) td:nth-child(n+1) {
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#natureTable tr td:nth-child(1) {
+    width: 110px;
+    color: #51f582;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #3a3f47;
+}
+
+#natureTable tbody tr:nth-child(5) td:nth-child(1) {
+    border-radius: 0px 0px 0px 15px;
+}
+
+#natureTable tbody tr:nth-child(1) td:nth-child(1) {
+    border-radius: 15px 0px 0px 0px;
+}
+
+#natureTable tbody tr:nth-child(5) td:nth-child(6) {
+    border-radius: 0px 0px 15px 0px;
+}
+
+#natureTable thead th:nth-child(2) {
+    border-radius: 15px 0px 0px 0px;
+}
+
+#natureTable thead th:nth-child(6) {
+    border-radius: 0px 15px 0px 0px;
+}

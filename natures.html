@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/natures.css">
+    <script src="js/natures.js" type="text/JavaScript"></script>
   </head>
 
   <body>
@@ -23,8 +25,75 @@
         <a id="selectedItem"> Natures
           <i class="material-icons">park</i>
         </a>
+    </div>
 
-      </div>
+    <!-- Nature Info -->
+    <div id="middleSection">
+        <h1>Natures</h1>
+        <hr>
+        <p id="natureText">All Pokemon have one of the 25 natures shown in the table to the right. All natures affects the value of two of the pokemons stats,
+            more specifically it raises one stat by 10% and decreases one stat by 10%. All base stats can be affected except hp, which is never affected.
+            <br><br>
+            With 5 remaining stats (Atk, Sp. Atk, Def, Sp. Def & Speed) which each can be increased and/or decreased, this leaves a total of 25 possible natures.
+            The 5 natures which increase and decrease the same stat are called neutral natures, and has no impact on the pokemons stats.
+        </p>
+        <div id="natureFocus">
+            <h2 id="selectedNature">noNatureSelected</h2>
+            <hr>
+            <p id="posStat">+ Def</p>
+            <p id="negStat">- Atk</p>
+        </div>
+    </div>
+
+    <!-- Nature Table -->
+    <div id="natureTableContainer">
+        <table id="natureTable">
+            <thead>
+                <tr>
+                    <th></th> <th>-Atk</th> <th>-Sp. Atk</th> <th>-Def</th> <th>-Sp. Def</th> <th>-Speed</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>+Atk</td> <td onclick="setNature(this, 'Atk', 'Atk')">Hardy</td> 
+                                  <td onclick="setNature(this, 'Atk', 'Sp. Atk')">Adamant</td> 
+                                  <td onclick="setNature(this, 'Atk', 'Def')">Lonely</td> 
+                                  <td onclick="setNature(this, 'Atk', 'Sp. Def')">Naughty</td> 
+                                  <td onclick="setNature(this, 'Atk', 'Speed')">Brave</td>
+                </tr>
+                <tr>
+                    <td>+Sp. Atk</td> <td onclick="setNature(this, 'Sp. Atk', 'Atk')">Modest</td> 
+                                      <td onclick="setNature(this, 'Sp. Atk', 'Sp. Atk')">Bashful</td> 
+                                      <td onclick="setNature(this, 'Sp. Atk', 'Def')">Mild</td> 
+                                      <td onclick="setNature(this, 'Sp. Atk', 'Sp. Def')">Rash</td> 
+                                      <td onclick="setNature(this, 'Sp. Atk', 'Speed')">Quiet</td>
+                </tr>
+                <tr>
+                    <td>+Def</td> <td onclick="setNature(this, 'Def', 'Atk')">Bold</td> 
+                                  <td onclick="setNature(this, 'Def', 'Sp. Atk')">Impish</td> 
+                                  <td onclick="setNature(this, 'Def', 'Def')">Docile</td> 
+                                  <td onclick="setNature(this, 'Def', 'Sp. Def')">Lax</td> 
+                                  <td onclick="setNature(this, 'Def', 'Speed')">Relaxed</td>
+                </tr>
+                <tr>
+                    <td>+Sp. Def</td> <td onclick="setNature(this, 'Sp. Def', 'Atk')">Calm</td> 
+                                      <td onclick="setNature(this, 'Sp. Def', 'Sp. Atk')">Careful</td> 
+                                      <td onclick="setNature(this, 'Sp. Def', 'Def')">Gentle</td>
+                                      <td onclick="setNature(this, 'Sp. Def', 'Sp. Def')">Quirky</td> 
+                                      <td onclick="setNature(this, 'Sp. Def', 'Speed')">Sassy</td>
+                </tr>
+                <tr>
+                    <td>+Speed</td> <td onclick="setNature(this, 'Speed', 'Atk')">Timid</td>
+                                    <td onclick="setNature(this, 'Speed', 'Sp. Atk')">Jolly</td> 
+                                    <td onclick="setNature(this, 'Speed', 'Def')">Hasty</td> 
+                                    <td onclick="setNature(this, 'Speed', 'Sp. Def')">Naive</td> 
+                                    <td onclick="setNature(this, 'Speed', 'Speed')">Serious</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+      
   </body>
   
 </html>
