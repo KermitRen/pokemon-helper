@@ -46,14 +46,14 @@ function reloadTypeDisplay() {
     //Load type 1
     if(selectedTypes.length >= 1) {
         let t1 = selectedTypes[0].slice(0,1).toUpperCase() + selectedTypes[0].substr(1);
-        type1.src = "/images/Pokemon_Type_Icon_" + t1 + ".svg"
+        type1.src = "images/Pokemon_Type_Icon_" + t1 + ".svg"
         type1.style.visibility = "visible";
     }
 
     //Load type 2
     if(selectedTypes.length == 2) {
         let t2 = selectedTypes[1].slice(0,1).toUpperCase() + selectedTypes[1].substr(1);
-        type2.src = "/images/Pokemon_Type_Icon_" + t2 + ".svg"
+        type2.src = "images/Pokemon_Type_Icon_" + t2 + ".svg"
         type2.style.visibility = "visible";
     }
 }
@@ -92,27 +92,27 @@ function reloadResults() {
         let weaknessCounter = 0, resistanceCounter = 0, immunityCounter = 0;
         for(var i = 0; i < pokemonTypeTable.length; i++) {
             if(pokemonTypeTable[i] > 1) {
-                weaknesses.children[weaknessCounter].children[0].src = "/images/Pokemon_Type_Icon_" + types[i] + ".svg"
+                weaknesses.children[weaknessCounter].children[0].src = "images/Pokemon_Type_Icon_" + types[i] + ".svg"
                 if(pokemonTypeTable[i] == 4) {
                     var modifierImg = document.createElement("img");
-                    modifierImg.src = "/images/weaknessModifier.svg";
+                    modifierImg.src = "images/weaknessModifier.svg";
                     modifierImg.className += "modifierImg";
                     weaknesses.children[weaknessCounter].appendChild(modifierImg);
                 }
                 weaknesses.children[weaknessCounter].style.visibility = "visible";
                 weaknessCounter++;
             } else if (pokemonTypeTable[i] < 1 && pokemonTypeTable[i] != 0) {
-                resistances.children[resistanceCounter].children[0].src = "/images/Pokemon_Type_Icon_" + types[i] + ".svg"
+                resistances.children[resistanceCounter].children[0].src = "images/Pokemon_Type_Icon_" + types[i] + ".svg"
                 if(pokemonTypeTable[i] == 0.25) {
                     var modifierImg = document.createElement("img");
-                    modifierImg.src = "/images/resistanceModifier.svg";
+                    modifierImg.src = "images/resistanceModifier.svg";
                     modifierImg.className += "modifierImg";
                     resistances.children[resistanceCounter].appendChild(modifierImg);
                 }
                 resistances.children[resistanceCounter].style.visibility = "visible";
                 resistanceCounter++;
             } else if (pokemonTypeTable[i] == 0) {
-                immunities.children[immunityCounter].children[0].src = "/images/Pokemon_Type_Icon_" + types[i] + ".svg"
+                immunities.children[immunityCounter].children[0].src = "images/Pokemon_Type_Icon_" + types[i] + ".svg"
                 immunities.children[immunityCounter].style.visibility = "visible";
                 immunityCounter++;
             }
