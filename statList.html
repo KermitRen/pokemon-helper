@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/statList.css">
+    <script src="js/statList.js" type="text/JavaScript"></script>
   </head>
 
   <body>
@@ -24,7 +26,89 @@
           <i class="material-icons">park</i>
         </a>
 
+    </div>
+
+    <!-- List of stats -->
+    <div id="statListFrame">
+      <table id="statList">
+        <thead>
+          <tr>
+            <th></th>
+            <th onClick="setSort('name', false)"> <span> POKEMON <img src="images/sortingIcon.svg"> </img> </span></th>
+            <th onClick="setSort('total', true)">TOTAL <img src="images/sortingIcon.svg"> </img></th>
+            <th onClick="setSort('hp', true)">HP <img src="images/sortingIcon.svg"> </img></th>
+            <th onClick="setSort('atk', true)">ATK <img src="images/sortingIcon.svg"> </img></th>
+            <th onClick="setSort('spAtk',true)">SP. ATK <img src="images/sortingIcon.svg"> </img></th>
+            <th onClick="setSort('def', true)">DEF <img src="images/sortingIcon.svg"> </img></th>
+            <th onClick="setSort('spDef', true)">SP. DEF <img src="images/sortingIcon.svg"> </img></th>
+            <th onClick="setSort('speed',true)">SPEED <img src="images/sortingIcon.svg"> </img></th>
+            <th onClick="setSort('no', false)"># <img src="images/sortingIcon.svg"> </img></th>
+          </tr>
+        </thead>
+        <tbody id="statListBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Right Section -->
+    <div id="rightSide">
+      <div id="searchSection"> 
+        <h2>Search</h2>
+        <hr>
+        <form>
+          <input type="text" oninput="reloadList()" id="searchBar">
+        </form>
       </div>
+
+      <div id="filterSection">
+        <h2>Filters</h2>
+        <hr>
+
+        <div id="filterTabs">
+          <button type="button" onclick="openFilterTab('generationTab')"> Generation </button>
+          <button type="button" onclick="openFilterTab('typeTab')"> Types </button>
+          <button type="button" onclick="openFilterTab('classTab')"> Class </button>
+  
+          <div id="generationTab" class="filterContent">
+            <div> <input type="checkbox" id="gen1" class="genFilter"> <p> Gen I</p> </div> 
+            <div> <input type="checkbox" id="gen2" class="genFilter"> <p> Gen II</p> </div> 
+            <div> <input type="checkbox" id="gen3" class="genFilter"> <p> Gen III</p> </div> 
+            <div> <input type="checkbox" id="gen4" class="genFilter"> <p> Gen IV</p> </div> 
+          </div>
+          <div id="typeTab" class="filterContent">
+            <div id="allDiv"> <input type="checkbox" id="typAll" onclick="allTypeCheckbox()"> <p> All</p> </div>
+            <div id="leftTypeDivs">
+              <div> <input type="checkbox" id="typnormal" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Normal</p> </div> 
+              <div> <input type="checkbox" id="typfighting" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Fighting</p> </div> 
+              <div> <input type="checkbox" id="typflying" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Flying</p> </div> 
+              <div> <input type="checkbox" id="typpoison" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Poison</p> </div>
+              <div> <input type="checkbox" id="typground" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Ground</p> </div> 
+              <div> <input type="checkbox" id="typrock" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Rock</p> </div> 
+              <div> <input type="checkbox" id="typbug" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Bug</p> </div> 
+              <div> <input type="checkbox" id="typghost" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Ghost</p> </div>
+              <div> <input type="checkbox" id="typsteel" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Steel</p> </div> 
+            </div>
+            <div id="rightTypeDivs">
+              <div> <input type="checkbox" id="typfire" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Fire</p> </div> 
+              <div> <input type="checkbox" id="typwater" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Water</p> </div> 
+              <div> <input type="checkbox" id="typgrass" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Grass</p> </div> 
+              <div> <input type="checkbox" id="typelectric" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Electric</p> </div>
+              <div> <input type="checkbox" id="typpsychic" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Psychic</p> </div> 
+              <div> <input type="checkbox" id="typice" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Ice</p> </div> 
+              <div> <input type="checkbox" id="typdragon" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Dragon</p> </div> 
+              <div> <input type="checkbox" id="typdark" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Dark</p> </div>
+              <div> <input type="checkbox" id="typfairy" class="typeFilter" onclick="fixAllTypeCheckbox(this)"> <p> Fairy</p> </div> 
+            </div>
+          </div>
+          <div id="classTab" class="filterContent">
+            <div> <input type="checkbox" id="classStandard" class="classFilter"> <p> Standard</p> </div> 
+            <div> <input type="checkbox" id="classMythical" class="classFilter"> <p> Mythical</p> </div> 
+            <div> <input type="checkbox" id="classLegendary" class="classFilter"> <p> Legendary</p> </div> 
+          </div>
+        </div>
+        <p id="applyButton" onclick="reloadList()"> Apply Filters</p>
+      </div>
+    </div>
+
   </body>
   
 </html>
