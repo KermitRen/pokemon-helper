@@ -125,7 +125,7 @@
 
 /* Filters */
 
-#filterTabs {
+.filterTabs {
     background-color: rgb(75, 81, 90);
     border-radius: 20px;
     height: 400px;
@@ -133,7 +133,7 @@
     box-shadow: 5px 5px 15px #262626ff;
 }
 
-#filterTabs button {
+.filterTabs button {
     float: left;
     width: 33.33%;
     border: none;
@@ -144,16 +144,16 @@
     font: 500 20px Poppins;
 }
 
-#filterTabs button:hover {
-    filter: brightness(90%);
+.filterTabs button:hover {
+    filter: brightness(90%) !important;
 }
 
-#filterTabs button:nth-child(1) {
+.filterTabs button:nth-child(1) {
     border-radius: 20px 0px 0px 0px;
     border-right: 1px solid rgba(0,0,0,0.2);
 }
 
-#filterTabs button:nth-child(3) {
+.filterTabs button:nth-child(3) {
     border-radius: 0px 20px 0px 0px;
     border-left: 1px solid rgba(0,0,0,0.2);
 }

@@ -63,7 +63,7 @@
     font-size: 20px;
     font-weight: 500;
     color: #ff3d3d;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 #natureTable tr td:nth-child(n+1) {
@@ -73,12 +73,17 @@
 }
 
 #natureTable tbody tr td:nth-child(n+2):hover {
-    filter: brightness(90%);
+    filter: brightness(90%) !important;
     cursor: pointer;
 }
 
+#natureTable td {
+    position: relative;
+    z-index: 2;
+}
+
 #natureTable tr:nth-child(n+2) td:nth-child(n+1) {
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 #natureTable tr td:nth-child(1) {

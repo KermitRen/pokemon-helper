@@ -207,10 +207,13 @@ function fixAllTypeCheckbox(checkbox) {
 function openFilterTab(tab) {
 
     filterContent = document.getElementsByClassName("filterContent");
+    filterButtons = document.getElementsByClassName("filterButton");
     for(var i = 0; i < filterContent.length; i++) {
         filterContent[i].style.display = "none";
+        filterButtons[i].style.filter = "brightness(100%)";
     }
 
+    document.getElementById(tab + "Button").style.filter = "brightness(90%)";
     document.getElementById(tab).style.display = "block";
 }
 
@@ -370,6 +373,106 @@ function setupAllPokemonList() {
     allPokemon.push({name:"Mew", types:["psychic"], total: 600, hp: 100, atk: 100, def: 100, spAtk: 100, spDef: 100, speed: 100, no: 151, class:"mythical"});
 
     //Gen 2
+    allPokemon.push({name:"Chikorita", types:["grass"], total: 318, hp: 45, atk: 49, def: 65, spAtk: 49, spDef: 65, speed: 45, no: 152});
+    allPokemon.push({name:"Bayleef", types:["grass"], total: 405, hp: 60, atk: 62, def: 80, spAtk: 63, spDef: 80, speed: 60, no: 153});
+    allPokemon.push({name:"Meganium", types:["grass"], total: 525, hp: 80, atk: 82, def: 100, spAtk: 83, spDef: 100, speed: 80, no: 154});
+    allPokemon.push({name:"Cyndaquil", types:["fire"], total: 309, hp: 39, atk: 52, def: 43, spAtk: 60, spDef: 50, speed: 65, no: 155});
+    allPokemon.push({name:"Quilava", types:["fire"], total: 405, hp: 58, atk: 64, def: 58, spAtk: 80, spDef: 65, speed: 80, no: 156});
+    allPokemon.push({name:"Typhlosion", types:["fire"], total: 534, hp: 78, atk: 84, def: 78, spAtk: 109, spDef: 85, speed: 100, no: 157});
+    allPokemon.push({name:"Totodile", types:["water"], total: 314, hp: 50, atk: 65, def: 64, spAtk: 44, spDef: 48, speed: 43, no: 158});
+    allPokemon.push({name:"Croconaw", types:["water"], total: 405, hp: 65, atk: 80, def: 80, spAtk: 59, spDef: 63, speed: 58, no: 159});
+    allPokemon.push({name:"Feraligatr", types:["water"], total: 530, hp: 85, atk: 105, def: 100, spAtk: 79, spDef: 83, speed: 78, no: 160});
+    allPokemon.push({name:"Sentret", types:["normal"], total: 215, hp: 35, atk: 46, def: 34, spAtk: 35, spDef: 45, speed: 20, no: 161});
+    allPokemon.push({name:"Furret", types:["normal"], total: 415, hp: 85, atk: 76, def: 64, spAtk: 45, spDef: 55, speed: 90, no: 162});
+    allPokemon.push({name:"Hoothoot", types:["normal","flying"], total: 262, hp: 60, atk: 30, def: 30, spAtk: 36, spDef: 56, speed: 50, no: 163});
+    allPokemon.push({name:"Noctowl", types:["normal","flying"], total: 452, hp: 100, atk: 50, def: 50, spAtk: 86, spDef: 96, speed: 70, no: 164});
+    allPokemon.push({name:"Ledyba", types:["bug", "flying"], total: 265, hp: 40, atk: 20, def: 30, spAtk: 40, spDef: 80, speed: 55, no: 165});
+    allPokemon.push({name:"Ledian", types:["bug", "flying"], total: 390, hp: 55, atk: 35, def: 50, spAtk: 55, spDef: 110, speed: 85, no: 166});
+    allPokemon.push({name:"Spinarak", types:["bug","poison"], total: 250, hp: 40, atk: 60, def: 40, spAtk: 40, spDef: 40, speed: 30, no: 167});
+    allPokemon.push({name:"Ariados", types:["bug","flying"], total: 400, hp: 70, atk: 90, def: 70, spAtk: 60, spDef: 70, speed: 40, no: 168});
+    allPokemon.push({name:"Crobat", types:["poison","flying"], total: 535, hp: 85, atk: 90, def: 80, spAtk: 70, spDef: 80, speed: 130, no: 169});
+    allPokemon.push({name:"Chinchou", types:["water","electric"], total: 330, hp: 75, atk: 38, def: 38, spAtk: 56, spDef: 56, speed: 67, no: 170});
+    allPokemon.push({name:"Lanturn", types:["water","electric"], total: 460, hp: 125, atk: 58, def: 58, spAtk: 76, spDef: 76, speed: 67, no: 171});
+    allPokemon.push({name:"Pichu", types:["electric"], total: 205, hp: 20, atk: 40, def: 15, spAtk: 35, spDef: 35, speed: 60, no: 172});
+    allPokemon.push({name:"Cleffa", types:["fairy"], total: 218, hp: 50, atk: 25, def: 28, spAtk: 45, spDef: 55, speed: 15, no: 173});
+    allPokemon.push({name:"Igglybuff", types:["normal","fairy"], total: 210, hp: 90, atk: 30, def: 15, spAtk: 40, spDef: 20, speed: 15, no: 174});
+    allPokemon.push({name:"Togepi", types:["fairy"], total: 245, hp: 35, atk: 20, def: 65, spAtk: 40, spDef: 65, speed: 20, no: 175});
+    allPokemon.push({name:"Togetic", types:["fairy","flying"], total: 405, hp: 55, atk: 40, def: 85, spAtk: 80, spDef: 105, speed: 40, no: 176});
+    allPokemon.push({name:"Natu", types:["psychic","flying"], total: 320, hp: 40, atk: 50, def: 45, spAtk: 70, spDef: 45, speed: 70, no: 177});
+    allPokemon.push({name:"Xatu", types:["psychic","flying"], total: 470, hp: 65, atk: 75, def: 70, spAtk: 95, spDef: 70, speed: 95, no: 178});
+    allPokemon.push({name:"Mareep", types:["electric"], total: 280, hp: 55, atk: 40, def: 40, spAtk: 65, spDef: 45, speed: 35, no: 179});
+    allPokemon.push({name:"Flaaffy", types:["electric"], total: 365, hp: 70, atk: 55, def: 55, spAtk: 80, spDef: 60, speed: 45, no: 180});
+    allPokemon.push({name:"Ampharos", types:["electric"], total: 510, hp: 90, atk: 75, def: 85, spAtk: 115, spDef: 90, speed: 55, no: 181});
+    allPokemon.push({name:"Bellossom", types:["grass"], total: 490, hp: 75, atk: 80, def: 95, spAtk: 90, spDef: 100, speed: 50, no: 182});
+    allPokemon.push({name:"Marill", types:["water","fairy"], total: 250, hp: 70, atk: 20, def: 50, spAtk: 20, spDef: 50, speed: 40, no: 183});
+    allPokemon.push({name:"Azumarill", types:["water","fairy"], total: 420, hp: 100, atk: 50, def: 80, spAtk: 60, spDef: 80, speed: 50, no: 184});
+    allPokemon.push({name:"Sudowoodo", types:["rock"], total: 410, hp: 70, atk: 100, def: 115, spAtk: 30, spDef: 65, speed: 30, no: 185});
+    allPokemon.push({name:"Politoed", types:["water"], total: 500, hp: 90, atk: 75, def: 75, spAtk: 90, spDef: 100, speed: 70, no: 186});
+    allPokemon.push({name:"Hoppip", types:["grass","flying"], total: 250, hp: 35, atk: 35, def: 40, spAtk: 35, spDef: 55, speed: 50, no: 187});
+    allPokemon.push({name:"Skiploom", types:["grass","flying"], total: 340, hp: 55, atk: 45, def: 50, spAtk: 45, spDef: 65, speed: 80, no: 188});
+    allPokemon.push({name:"Jumpluff", types:["grass","flying"], total: 460, hp: 75, atk: 55, def: 70, spAtk: 55, spDef: 95, speed: 110, no: 189});
+    allPokemon.push({name:"Aipom", types:["normal"], total: 360, hp: 55, atk: 70, def: 55, spAtk: 40, spDef: 55, speed: 85, no: 190});
+    allPokemon.push({name:"Sunkern", types:["grass"], total: 180, hp: 30, atk: 30, def: 30, spAtk: 30, spDef: 30, speed: 30, no: 191});
+    allPokemon.push({name:"Sunflora", types:["grass"], total: 425, hp: 75, atk: 75, def: 55, spAtk: 105, spDef: 85, speed: 30, no: 192});
+    allPokemon.push({name:"Yanma", types:["bug","flying"], total: 390, hp: 65, atk: 65, def: 45, spAtk: 75, spDef: 45, speed: 95, no: 193});
+    allPokemon.push({name:"Wooper", types:["water","ground"], total: 210, hp: 55, atk: 45, def: 45, spAtk: 25, spDef: 25, speed: 15, no: 194});
+    allPokemon.push({name:"Quagsire", types:["water","ground"], total: 430, hp: 95, atk: 85, def: 85, spAtk: 65, spDef: 65, speed: 35, no: 195});
+    allPokemon.push({name:"Espeon", types:["psychic"], total: 525, hp: 65, atk: 65, def: 60, spAtk: 130, spDef: 95, speed: 110, no: 196});
+    allPokemon.push({name:"Umbreon", types:["dark"], total: 525, hp: 95, atk: 65, def: 110, spAtk: 60, spDef: 130, speed: 65, no: 197});
+    allPokemon.push({name:"Murkrow", types:["dark","flying"], total: 405, hp: 60, atk: 85, def: 42, spAtk: 85, spDef: 42, speed: 91, no: 198});
+    allPokemon.push({name:"Slowking", types:["water","psychic"], total: 490, hp: 95, atk: 75, def: 80, spAtk: 100, spDef: 110, speed: 30, no: 199});
+    allPokemon.push({name:"Misdreavus", types:["ghost"], total: 435, hp: 60, atk: 60, def: 60, spAtk: 85, spDef: 85, speed: 85, no: 200});
+    allPokemon.push({name:"Unown", types:["psychic"], total: 336, hp: 48, atk: 72, def: 48, spAtk: 72, spDef: 48, speed: 48, no: 201});
+    allPokemon.push({name:"Wobbuffet", types:["psychic"], total: 405, hp: 190, atk: 33, def: 58, spAtk: 33, spDef: 58, speed: 33, no: 202});
+    allPokemon.push({name:"Girafarig", types:["normal","psychic"], total: 455, hp: 70, atk: 80, def: 65, spAtk: 90, spDef: 65, speed: 85, no: 203});
+    allPokemon.push({name:"Pineco", types:["bug"], total: 290, hp: 50, atk: 65, def: 90, spAtk: 35, spDef: 35, speed: 15, no: 204});
+    allPokemon.push({name:"Forretress", types:["bug","steel"], total: 465, hp: 75, atk: 90, def: 140, spAtk: 60, spDef: 60, speed: 40, no: 205});
+    allPokemon.push({name:"Dunsparce", types:["normal"], total: 415, hp: 100, atk: 70, def: 70, spAtk: 65, spDef: 65, speed: 45, no: 206});
+    allPokemon.push({name:"Gligar", types:["ground", "flying"], total: 430, hp: 65, atk: 75, def: 105, spAtk: 35, spDef: 65, speed: 85, no: 207});
+    allPokemon.push({name:"Steelix", types:["steel","ground"], total: 510, hp: 75, atk: 85, def: 200, spAtk: 55, spDef: 65, speed: 30, no: 208});
+    allPokemon.push({name:"Snubbull", types:["fairy"], total: 300, hp: 60, atk: 80, def: 50, spAtk: 40, spDef: 40, speed: 30, no: 209});
+    allPokemon.push({name:"Granbull", types:["fairy"], total: 450, hp: 90, atk: 120, def: 75, spAtk: 60, spDef: 60, speed: 45, no: 210});
+    allPokemon.push({name:"Qwilfish", types:["water","poison"], total: 440, hp: 65, atk: 95, def: 85, spAtk: 55, spDef: 55, speed: 85, no: 211});
+    allPokemon.push({name:"Scizor", types:["bug","steel"], total: 500, hp: 70, atk: 130, def: 100, spAtk: 55, spDef: 80, speed: 65, no: 212});
+    allPokemon.push({name:"Shuckle", types:["bug","rock"], total: 505, hp: 20, atk: 10, def: 230, spAtk: 10, spDef: 230, speed: 5, no: 213});
+    allPokemon.push({name:"Heracrpss", types:["bug","fighting"], total: 500, hp: 80, atk: 125, def: 75, spAtk: 40, spDef: 95, speed: 85, no: 214});
+    allPokemon.push({name:"Sneasel", types:["dark","ice"], total: 430, hp: 55, atk: 95, def: 55, spAtk: 35, spDef: 75, speed: 115, no: 215});
+    allPokemon.push({name:"Teddiursa", types:["normal"], total: 330, hp: 60, atk: 80, def: 50, spAtk: 50, spDef: 50, speed: 40, no: 216});
+    allPokemon.push({name:"Ursaring", types:["normal"], total: 500, hp: 90, atk: 130, def: 75, spAtk: 75, spDef: 75, speed: 55, no: 217});
+    allPokemon.push({name:"Slugma", types:["fire"], total: 250, hp: 40, atk: 40, def: 40, spAtk: 70, spDef: 40, speed: 20, no: 218});
+    allPokemon.push({name:"Magcargo", types:["fire","rock"], total: 430, hp: 60, atk: 50, def: 120, spAtk: 90, spDef: 80, speed: 30, no: 219});
+    allPokemon.push({name:"Swinub", types:["ice","ground"], total: 250, hp: 50, atk: 50, def: 40, spAtk: 30, spDef: 30, speed: 50, no: 220});
+    allPokemon.push({name:"Piloswine", types:["ice","ground"], total: 450, hp: 100, atk: 100, def: 80, spAtk: 60, spDef: 60, speed: 50, no: 221});
+    allPokemon.push({name:"Corsola", types:["water","rock"], total: 410, hp: 65, atk: 55, def: 95, spAtk: 65, spDef: 95, speed: 35, no: 222});
+    allPokemon.push({name:"Remoraid", types:["water"], total: 300, hp: 35, atk: 65, def: 35, spAtk: 65, spDef: 35, speed: 65, no: 223});
+    allPokemon.push({name:"Octillery", types:["water"], total: 480, hp: 75, atk: 105, def: 75, spAtk: 105, spDef: 75, speed: 45, no: 224});
+    allPokemon.push({name:"Delibird", types:["ice","flying"], total: 330, hp: 45, atk: 55, def: 45, spAtk: 65, spDef: 45, speed: 75, no: 225});
+    allPokemon.push({name:"Mantine", types:["water","flying"], total: 485, hp: 85, atk: 40, def: 70, spAtk: 80, spDef: 140, speed: 70, no: 226});
+    allPokemon.push({name:"Skarmory", types:["steel","flying"], total: 465, hp: 65, atk: 80, def: 140, spAtk: 40, spDef: 70, speed: 70, no: 227});
+    allPokemon.push({name:"Houndour", types:["dark","fire"], total: 330, hp: 45, atk: 60, def: 30, spAtk: 80, spDef: 50, speed: 65, no: 228});
+    allPokemon.push({name:"Houndoom", types:["dark","fire"], total: 500, hp: 75, atk: 90, def: 50, spAtk: 110, spDef: 80, speed: 95, no: 229});
+    allPokemon.push({name:"Kingdra", types:["water","dragon"], total: 540, hp: 75, atk: 95, def: 95, spAtk: 95, spDef: 95, speed: 85, no: 230});
+    allPokemon.push({name:"Phanpy", types:["ground"], total: 330, hp: 90, atk: 60, def: 60, spAtk: 40, spDef: 40, speed: 40, no: 231});
+    allPokemon.push({name:"Donphan", types:["ground"], total: 500, hp: 90, atk: 120, def: 120, spAtk: 60, spDef: 60, speed: 50, no: 232});
+    allPokemon.push({name:"Porygon2", types:["normal"], total: 515, hp: 85, atk: 80, def: 90, spAtk: 105, spDef: 95, speed: 60, no: 233});
+    allPokemon.push({name:"Stantler", types:["normal"], total: 465, hp: 73, atk: 95, def: 62, spAtk: 85, spDef: 65, speed: 85, no: 234});
+    allPokemon.push({name:"Smeargle", types:["normal"], total: 250, hp: 55, atk: 20, def: 35, spAtk: 20, spDef: 45, speed: 75, no: 235});
+    allPokemon.push({name:"Tyrogue", types:["fighting"], total: 210, hp: 35, atk: 35, def: 35, spAtk: 35, spDef: 35, speed: 35, no: 236});
+    allPokemon.push({name:"Hitmontop", types:["fighting"], total: 455, hp: 50, atk: 95, def: 95, spAtk: 35, spDef: 110, speed: 70, no: 237});
+    allPokemon.push({name:"Smoochum", types:["ice","psychic"], total: 305, hp: 45, atk: 30, def: 15, spAtk: 85, spDef: 65, speed: 65, no: 238});
+    allPokemon.push({name:"Elekid", types:["electric"], total: 360, hp: 45, atk: 63, def: 37, spAtk: 65, spDef: 55, speed: 95, no: 239});
+    allPokemon.push({name:"Magby", types:["fire"], total: 365, hp: 45, atk: 75, def: 37, spAtk: 70, spDef: 55, speed: 83, no: 240});
+    allPokemon.push({name:"Miltank", types:["normal"], total: 490, hp: 95, atk: 80, def: 105, spAtk: 40, spDef: 70, speed: 100, no: 241});
+    allPokemon.push({name:"Blissey", types:["normal"], total: 540, hp: 255, atk: 10, def: 10, spAtk: 75, spDef: 135, speed: 55, no: 242});
+    allPokemon.push({name:"Raikou", types:["electric"], total: 580, hp: 90, atk: 85, def: 75, spAtk: 115, spDef: 100, speed: 115, no: 243, class:"legendary"});
+    allPokemon.push({name:"Entei", types:["fire"], total: 580, hp: 115, atk: 115, def: 85, spAtk: 90, spDef: 75, speed: 100, no: 244, class:"legendary"});
+    allPokemon.push({name:"Suicune", types:["water"], total: 580, hp: 100, atk: 75, def: 115, spAtk: 90, spDef: 115, speed: 85, no: 245, class:"legendary"});
+    allPokemon.push({name:"Larvitar", types:["rock","ground"], total: 300, hp: 50, atk: 64, def: 50, spAtk: 45, spDef: 50, speed: 41, no: 246});
+    allPokemon.push({name:"Pupitar", types:["rock","ground"], total: 410, hp: 70, atk: 84, def: 70, spAtk: 65, spDef: 70, speed: 51, no: 247});
+    allPokemon.push({name:"Tyranitar", types:["rock","dark"], total: 600, hp: 100, atk: 134, def: 110, spAtk: 95, spDef: 100, speed: 61, no: 248});
+    allPokemon.push({name:"Lugia", types:["psychic","flying"], total: 680, hp: 106, atk: 90, def: 130, spAtk: 90, spDef: 154, speed: 110, no: 249, class:"legendary"});
+    allPokemon.push({name:"Ho-oh", types:["fire","flying"], total: 680, hp: 106, atk: 130, def: 90, spAtk: 110, spDef: 154, speed: 90, no: 250, class:"legendary"});
+    allPokemon.push({name:"Celebi", types:["psychic","grass"], total: 600, hp: 100, atk: 100, def: 100, spAtk: 100, spDef: 100, speed: 100, no: 251, class:"mythical"});
 
     //allPokemon.push({name:"", types:[""], total: , hp: , atk: , def: , spAtk: , spDef: , speed: , no: });
 }
